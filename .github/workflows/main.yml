@@ -4,10 +4,9 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
-
 jobs:
   ci:
-    runs-on: self-hosted 💻
+    runs-on: self-hosted
     steps:
       - name: 🔐 Autenticar no Docker Hub
         run: echo "Executando o comando Docker login"
@@ -17,9 +16,8 @@ jobs:
 
       - name: 🚢 Envio da Imagem Docker
         run: echo "Executando o comando Docker push"
-
   cd:
-    runs-on: self-hosted 💻
+    runs-on: self-hosted
     needs: [ci]
     steps:
       - name: 🔐 Autenticar na AWS
