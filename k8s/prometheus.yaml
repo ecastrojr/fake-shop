@@ -783,7 +783,7 @@ spec:
           livenessProbe:
             failureThreshold: 3
             httpGet:
-            - httpHeaders:
+              httpHeaders:
               path: /
               port: 9100
               scheme: HTTP
@@ -794,7 +794,7 @@ spec:
           readinessProbe:
             failureThreshold: 3
             httpGet:
-            - httpHeaders:
+              httpHeaders:
               path: /
               port: 9100
               scheme: HTTP
@@ -888,7 +888,7 @@ spec:
         livenessProbe:
           failureThreshold: 3
           httpGet:
-          - httpHeaders:
+            httpHeaders:
             path: /livez
             port: 8080
             scheme: HTTP
@@ -899,7 +899,7 @@ spec:
         readinessProbe:
           failureThreshold: 3
           httpGet:
-          - httpHeaders:
+            httpHeaders:
             path: /readyz
             port: 8080
             scheme: HTTP
