@@ -53,5 +53,6 @@ jobs:
         with:
           manifests: |
             ./k8s/deployment.yaml
+            ./k8s/prometheus.yaml
           images: |
             ${{ secrets.DOCKERHUB_USERNAME }}/fake-shop:v${{ github.run_number}}
